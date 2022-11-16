@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  transition: all ease-in-out 1s;
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  color: #fff;
+  font-size: 37px;
+  margin-bottom: 1rem;
+}
+h4 {
+  color: black;
+  background-color: #c7c7c7;
+  width: 170px;
+  padding: 0.5rem 1rem;
+}
+p {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 1rem;
+}
+header {
+  flex: 1;
+  background-color: #1e255a;
+  color: #ffff;
+}
+nav {
+  position: fixed;
+  height: 100%;
+  padding: 3rem 2rem;
+  transition: all ease-in-out 1s;
+}
+ul {
+  position: relative;
+  transition: all ease-in-out 1s;
+}
+li:not(.chaines li, .boucle li, .Tableaux li) {
+  list-style: none;
+  margin-top: 2rem;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+.chaines li,
+.boucle li,
+.Tableaux li {
+  border-bottom: 1px #1e255a solid;
+  list-style: none;
+  margin: 1rem 0;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+.chaines,
+.boucle,
+.Tableaux {
+  position: relative;
+}
+li:hover:not(.chaines, .boucle, .Tableaux) {
+  transform: translateX(5%);
+}
+.chaines {
+  transition: all ease-in-out 0.4s;
+}
+.chaines:hover .drop-down,
+.boucle:hover .drop-down,
+.Tableaux:hover .drop-down {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  width: 250px;
+  transition: all ease-in-out 1s;
+}
+.chaines,
+.boucle,
+.Tableaux {
+  transition: all ease-in-out 1s;
+}
+a {
+  transition: all ease-in-out 1s;
+  text-transform: capitalize;
+  width: 100%;
+  text-decoration: none;
+  color: #ffff;
+}
+.drop-down {
+  display: none;
+  background: #fff;
+  border-radius: 0.3rem;
+  z-index: 1000;
+  color: black;
+  padding: 0.8rem 1rem;
+  transition: all ease-in-out 1s;
+}
+.drop-down a {
+  z-index: 1000;
+  color: black;
+}
+.home {
+  height: 93.2vh;
+}
+main {
+  background-color: #050a30;
+  height: 100%;
+  width: 100%;
+  flex: 4;
+}
+section {
+  border-radius: 0.6rem;
+
+  margin: 2rem;
+  padding: 2rem 70px;
+  background-color: #1e255a;
+}
+textarea {
+  font-family: "Poppins", sans-serif;
+  height: 500px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+form {
+  background-color: #f1f1f1;
+  color: black;
+  display: flex;
+  padding: 1.3rem 1rem;
+}
+form input {
+  border: none;
+  margin-right: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  color: black;
+}
+
+@media only screen and (max-width: 1196px) {
+  /* header {
+    width: 30%;
+  } */
+  nav {
+    padding: 1rem;
+  }
+  main {
+    flex: 3;
+  }
+}
+@media only screen and (max-width: 700px) {
+  section {
+    padding: 1rem;
+    padding-left: 4rem;
+  }
+  form {
+    flex-direction: column;
+  }
+  #switch {
+    align-self: flex-start;
+    margin: 2rem 0;
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,28 @@
+label {
+  display: block;
+}
+button {
+  border: none;
+  background-color: black;
+  color: #ffff;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+#output {
+  background-color: #ffff;
+  width: 100%;
+  padding: 1rem;
+}
+#again {
+  display: none;
+  background-color: red;
+}
+
+.big {
+  font-size: 25px;
+  color: red;
+  transition: 1s all ease-in-out;
+}

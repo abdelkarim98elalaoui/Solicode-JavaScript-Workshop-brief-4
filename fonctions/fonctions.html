@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./fonctions.css" />
+    <link rel="stylesheet" href="/home.css" />
+    <title>Solicode JavaScript Workshop</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li>
+            <a href="../variables/variables.html">Variables et affectation</a>
+          </li>
+          <li><a href="../conditions/conditions.html">conditions</a></li>
+          <li class="boucle">
+            <a>boucle</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../les-boucles/for-loop/for-loop.html"
+                  >La boucle for</a
+                >
+              </li>
+              <li>
+                <a href="../les-boucles/while-loop/while.html"
+                  >La boucle while</a
+                >
+              </li>
+              <li>
+                <a href="../les-boucles/imbriquées/imbriquées.html"
+                  >Les boucles imbriquées</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="chaines">
+            <a>Les chaines</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../les chaines/Recherche/Recherche.html"
+                  >Recherche et suppression</a
+                >
+              </li>
+              <li>
+                <a href="../les chaines/voyelles/voyelles.html"
+                  >Nombre de voyelles</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="Tableaux">
+            <a>Les Tableaux</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../Les tableaux/Tri/Tri.html">Tri </a>
+              </li>
+              <li>
+                <a href="../Les tableaux/Recherche dans un tableau/rech.html"
+                  >Recherche
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="../fonctions/fonctions.html">fonctions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="Enonce">
+        <h2>Valider une date</h2>
+        <h4>Enoncé</h4>
+        <p>
+          Créez 4 fonctions Javascript (Somme, Soustraction, Division,
+          Multiplication). L'utilisateur saisie deux nombres dans deux inputs,
+          choisi ensuite une opération arithmétique. Le résultat est donné par
+          l'une des 4 fonctions Javascript.
+        </p>
+      </section>
+
+      <section class="Demo">
+        <h4>Démo</h4>
+        <form>
+          <input type="number" name="num1" id="num1" />
+          <input type="number" id="num2" />
+
+          <button id="plus">+</button>
+          <button id="moin">-</button>
+          <button id="multipl">x</button>
+          <button id="devid">/</button>
+        </form>
+        <div id="result">
+          <p id="output"></p>
+        </div>
+      </section>
+      <section class="code-source">
+        <h4>Code Source</h4>
+        <textarea name="code" id="code">
+          let plus = document.querySelector("#plus");
+      const moin = document.querySelector("#moin");
+      const multipl = document.querySelector("#multipl");
+      const devid = document.querySelector("#devid");
+      let num1 = document.querySelector("#num1");
+      let num2 = document.querySelector("#num2");
+      const output = document.getElementById("output");
+
+      plus.addEventListener("click", plusOpertaion);
+      function plusOpertaion(e) {
+        e.preventDefault();
+        let num3 = parseInt(document.querySelector("#num1").value);
+        let num4 = parseInt(document.querySelector("#num2").value);
+        output.innerHTML = num3 + num4;
+        console.log(output);
+      }
+
+      moin.addEventListener("click", moinOpertaion);
+      function moinOpertaion(e) {
+        e.preventDefault();
+        output.innerText = num1.value - num2.value;
+
+        console.log("moin");
+      }
+      multipl.addEventListener("click", multplOpertaion);
+      function multplOpertaion(e) {
+        e.preventDefault();
+        output.innerText = num1.value * num2.value;
+        console.log("multpl");
+      }
+      devid.addEventListener("click", devidOpertaion);
+      function devidOpertaion(e) {
+        e.preventDefault();
+        output.innerText = num1.value / num2.value;
+        console.log("devid");
+      }
+        </textarea>
+      </section>
+    </main>
+
+    <script src="./fonction.js"></script>
+  </body>
+</html>

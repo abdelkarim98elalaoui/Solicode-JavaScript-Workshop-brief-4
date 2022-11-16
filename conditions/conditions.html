@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ba43b102da.js"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./conditions.css" />
+    <link rel="stylesheet" href="../home.css" />
+    <title>Solicode JavaScript Workshop</title>
+  </head>
+  <body>
+    <button id="openBtn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <button id="closeBtn">
+      <i class="fa-solid fa-x"></i>
+    </button>
+    <header id="head">
+      <nav>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li>
+            <a href="../variables/variables.html">Variables et affectation</a>
+          </li>
+          <li><a href="../conditions/conditions.html">conditions</a></li>
+          <li class="boucle">
+            <a>boucle</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../les-boucles/for-loop/for-loop.html"
+                  >La boucle for</a
+                >
+              </li>
+              <li>
+                <a href="../les-boucles/while-loop/while.html"
+                  >La boucle while</a
+                >
+              </li>
+              <li>
+                <a href="../les-boucles/imbriquées/imbriquées.html"
+                  >Les boucles imbriquées</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="chaines">
+            <a>Les chaines</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../les chaines/Recherche/Recherche.html"
+                  >Recherche et suppression</a
+                >
+              </li>
+              <li>
+                <a href="../les chaines/voyelles/voyelles.html"
+                  >Nombre de voyelles</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="Tableaux">
+            <a>Les Tableaux</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../Les tableaux/Tri/Tri.html">Tri </a>
+              </li>
+              <li>
+                <a href="../Les tableaux/Recherche dans un tableau/rech.html"
+                  >Recherche
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="../fonctions/fonctions.html">fonctions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Enonce">
+        <h2>Valider une date</h2>
+        <h4>Enoncé</h4>
+        <p>
+          Ecrire un script qui permet de saisir les trois champs d'une date
+          (jour, mois et année) et d'indiquer si la date est correcte ou non
+        </p>
+      </section>
+
+      <section class="Demo">
+        <h4>Démo</h4>
+        <form>
+          <div class="jour">
+            <label for="jour">Jour : </label>
+
+            <input id="jours" type="number" required />
+          </div>
+          <div class="moi">
+            <label for="mois">Mois : </label>
+
+            <input id="mois" type="number" required />
+          </div>
+          <div class="Annee">
+            <label for="Annee">Année:</label>
+
+            <input id="annees" type="number" required />
+            <button id="valid-btn">Valider</button>
+          </div>
+        </form>
+        <div id="result">
+          <p id="output"></p>
+        </div>
+      </section>
+      <section class="code-source">
+        <h4>Code Source</h4>
+        <textarea name="code" id="code">
+          const jour = document.querySelector("#jours");
+const mois = document.querySelector("#mois");
+const annee = document.querySelector("#annees");
+const validBtn = document.querySelector("#valid-btn");
+const output = document.querySelector("#output");
+
+validBtn.addEventListener("click", resultFun);
+
+function resultFun(e) {
+  e.preventDefault();
+  if (
+    annee.value > 1900 &&
+    jour.value >= 1 &&
+    (((mois.value == 4 ||
+      mois.value == 6 ||
+      mois.value == 9 ||
+      mois.value == 11) &&
+      jour.value <= 30) ||
+      ((mois.value == 1 ||
+        mois.value == 3 ||
+        mois.value == 5 ||
+        mois.value == 7 ||
+        mois.value == 8 ||
+        mois.value == 10 ||
+        mois.value == 12) &&
+        jour.value <= 31) ||
+      (mois.value == 2 && jour.value <= 28))
+  ) {
+    output.innerText = "its correct";
+  } else {
+    output.innerText = "its incorrect";
+  }
+}
+
+        </textarea>
+      </section>
+    </main>
+
+    <script src="./conditions.js"></script>
+  </body>
+</html>

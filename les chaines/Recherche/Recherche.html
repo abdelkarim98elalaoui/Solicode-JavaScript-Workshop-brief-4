@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Recherche.css">
+    <!-- <link rel="stylesheet" href="/home.css" /> -->
+    <title>Solicode JavaScript Workshop</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li>
+            <a href="/./variables/variables.html">Variables et affectation</a>
+          </li>
+          <li><a href="/./conditions/conditions.html">conditions</a></li>
+          <li class="boucle">
+            <a>boucle</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../for-loop/for-loop.html">La boucle for</a>
+              </li>
+              <li>
+                <a href="../while-loop/while.html">La boucle while</a>
+              </li>
+              <li>
+                <a href="../imbriquées/imbriquées.html"
+                  >Les boucles imbriquées</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="chaines">
+            <a>Les chaines</a>
+            <ul class="drop-down">
+              <li>
+                <a href="/./les chaines/Recherche/Recherche.html"
+                  >Recherche et suppression</a
+                >
+              </li>
+              <li>
+                <a href="/./les chaines/voyelles/voyelles.html"
+                  >Nombre de voyelles</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="Tableaux">
+            <a>Les Tableaux</a>
+            <ul class="drop-down">
+              <li>
+                <a href="/./Les tableaux/Tri/Tri.html">Tri </a>
+              </li>
+              <li>
+                <a href="/./Les tableaux/Recherche dans un tableau/rech.html"
+                  >Recherche
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/./fonctions/fonctions.html">fonctions</a></li>
+        </ul>
+      </nav>
+    </header>
+   <main>
+      <section class="Enonce">
+        <h2>Recherche et suppression dans une chaine</h2>
+        <h4>Enoncé</h4>
+        <p>
+          Ecrire un programme Javascript qui demande à l'utilisateur de saisir une phrase dans une zone de texte et un mot dans une autre zone de texte. Le clique sur le bouton rechercher affiche un message si le mot existe dans la phrase ou non. Le clique sur le bouton supprimer permet d'effacer toutes les occurrence du mot dans la phrase ( si le mot existe bien sûr). 
+        </p> 
+      </section>
+
+      <section class="Demo">
+        <h4>Démo</h4>
+        <form>
+          <div class="phrase-inp">
+            <label for="jour">Saisir une phrase </label>
+            <input id="phrase-user" type="text" required />
+          </div>
+          <div class="mots">
+            <label for="mot">Saisir le mot à rechercher ou à supprimer </label>
+            <input id="mot" type="text" required />
+          </div>
+        
+            <button id="search">Rechercher
+            </button>
+            <button id="delete">Supprimer les occurences</button>
+       
+        </form>
+    
+          <p id="output"></p>
+   
+      </section>
+      <section class="code-source">
+        <h4>Code Source</h4>
+        <textarea name="code" id="code">
+          const searchBtn = document.querySelector("#search");
+let phrase = document.querySelector("#phrase-user");
+let output = document.querySelector("#output");
+let mot = document.querySelector("#mot");
+const deleteBtn = document.querySelector("#delete");
+searchBtn.addEventListener("click", find);
+deleteBtn.addEventListener("click", deleteFun);
+function find(e) {
+  e.preventDefault();
+  console.log(phrase.value);
+  console.log(mot.value);
+
+  phrase.value.indexOf(mot.value);
+  if (phrase.value.includes(mot.value)) {
+    output.innerHTML = "yes is there";
+  } else {
+    output.innerHTML = "its not there";
+  }
+}
+function deleteFun(e) {
+  e.preventDefault();
+  output.innerHTML = phrase.value.replace(mot.value, "");
+}
+
+        </textarea>
+      </section>
+    </main>
+>
+    </main>
+    <script src="/les chaines/Recherche/recherche.js"></script>
+  </body>
+</html>

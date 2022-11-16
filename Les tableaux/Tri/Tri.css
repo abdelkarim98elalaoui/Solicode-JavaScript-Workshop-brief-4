@@ -1,0 +1,21 @@
+.new-inp,
+.last-inp {
+  width: 70px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+#trier {
+  display: none;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+button {
+  background-color: black;
+  color: #fff;
+  padding: 0rem 1rem;
+  border: none;
+  cursor: pointer;
+}

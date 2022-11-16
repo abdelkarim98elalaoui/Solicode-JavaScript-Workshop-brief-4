@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./rech.css" />
+    <link rel="stylesheet" href="/home.css" />
+    <title>Solicode JavaScript Workshop</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li>
+            <a href="/./variables/variables.html">Variables et affectation</a>
+          </li>
+          <li><a href="/./conditions/conditions.html">conditions</a></li>
+          <li class="boucle">
+            <a>boucle</a>
+            <ul class="drop-down">
+              <li>
+                <a href="../for-loop/for-loop.html">La boucle for</a>
+              </li>
+              <li>
+                <a href="../while-loop/while.html">La boucle while</a>
+              </li>
+              <li>
+                <a href="../imbriquées/imbriquées.html"
+                  >Les boucles imbriquées</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="chaines">
+            <a>Les chaines</a>
+            <ul class="drop-down">
+              <li>
+                <a href="/./les chaines/Recherche/Recherche.html"
+                  >Recherche et suppression</a
+                >
+              </li>
+              <li>
+                <a href="/./les chaines/voyelles/voyelles.html"
+                  >Nombre de voyelles</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="Tableaux">
+            <a>Les Tableaux</a>
+            <ul class="drop-down">
+              <li>
+                <a href="/./Les tableaux/Tri/Tri.html">Tri </a>
+              </li>
+              <li>
+                <a href="/./Les tableaux/Recherche dans un tableau/rech.html"
+                  >Recherche
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/./fonctions/fonctions.html">fonctions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="Enonce">
+        <h2>Valider une date</h2>
+        <h4>Enoncé</h4>
+        <p>
+          Ecrire un programme Javascript qui permet de trier un tableau d'entier
+          (Utiliser n'importe quel algorithme de tri mais surtout pas la
+          fonction Sort de l'objet Array). L'utilisateur commence tout d'abord
+          par saisir la taille du tableau, ensuite il remplit le tableau pour
+          cliquer à la fin sur un bouton trier : celui-ci affichera le tableau
+          en ordre croissant ou décroissant.
+        </p>
+      </section>
+
+      <section class="Demo">
+        <h4>Démo</h4>
+        <form>
+          <label for="#">Donner la taille du tableau</label>
+          <input min="2" max="10" type="number" name="" id="numInp" />
+          <button id="tap">valider</button>
+        </form>
+        <form action="#">
+          <label for="#">Veuiller remplir le tableau</label>
+          <div id="search">
+            <div id="table"></div>
+            <input id="searchNum" type="number" />
+            <button id="Rechercher">Rechercher</button>
+          </div>
+        </form>
+
+        <div id="result">
+          <p id="output"></p>
+        </div>
+      </section>
+      <section class="code-source">
+        <h4>Code Source</h4>
+        <textarea name="code" id="code">
+          let btn = document.querySelector("#tap");
+let table = document.querySelector("#table");
+let inp = document.querySelector("#numInp");
+let Rechercher = document.querySelector("#Rechercher");
+let output = document.querySelector("#output");
+let searchNum = document.getElementById("searchNum");
+
+btn.addEventListener("click", create);
+Rechercher.addEventListener("click", search);
+
+function create(e) {
+  e.preventDefault();
+
+  for (let i = 0; i <= inp.value - 1; i++) {
+    const newInp = document.createElement("input");
+    newInp.setAttribute("class", "newInp");
+    table.append(newInp);
+    btn.disabled = true;
+    inp.disabled = true;
+  }
+}
+let arr = [];
+function search(e) {
+  e.preventDefault();
+  var arr = [];
+  let inptValue = document.querySelectorAll(".newInp");
+
+  for (let i = 0; i < inp.value; i++) {
+    arr.push(inptValue[i].value);
+    console.log(arr);
+  }
+
+  console.log(searchNum.value);
+
+  if (arr.includes(searchNum.value)) {
+    output.innerHTML = "its here";
+  } else {
+    console.log("its not here");
+    output.innerHTML = "its not here";
+  }
+}
+
+        </textarea>
+      </section>
+    </main>
+    <script src="./rech.js"></script>
+  </body>
+</html>

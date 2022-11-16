@@ -1,0 +1,129 @@
+h2 {
+  color: #fff;
+  font-size: 37px;
+  margin-bottom: 1rem;
+}
+h4 {
+  color: black;
+  background-color: #c7c7c7;
+  width: 170px;
+  padding: 0.5rem 1rem;
+}
+#closeBtn {
+  display: none;
+  color: black;
+  z-index: 1000;
+}
+p {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 1rem;
+}
+.Enonce {
+  padding-bottom: 3rem;
+  color: #fff;
+  height: 100%;
+}
+form {
+  background-color: #f1f1f1;
+  color: black;
+  display: flex;
+  padding: 1.3rem 1rem;
+}
+form input {
+  border: none;
+  margin-right: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  color: black;
+}
+form button {
+  align-self: flex-end;
+  width: 30px;
+  margin-right: 1rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 1rem 2rem;
+}
+i {
+  color: #ffff;
+  font-size: 1.4rem;
+}
+form label {
+  display: block;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+.Demo {
+  color: white;
+
+  height: 100%;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+#closeBtn,
+#openBtn {
+  display: none;
+  padding: 1rem;
+}
+@media only screen and (max-width: 1196px) {
+  body {
+    display: block;
+    height: 100%;
+  }
+  section {
+    margin: 0;
+    height: 100%;
+  }
+  #closeBtn,
+  #openBtn {
+    display: block;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0%;
+  }
+  #closeBtn {
+    display: none;
+    color: black;
+    z-index: 1000;
+  }
+  i {
+    color: #ffff;
+    font-size: 2rem;
+  }
+  #closeBtn i {
+    color: black;
+    z-index: 10000;
+  }
+  header {
+    position: absolute;
+    background-color: #fff;
+    width: 40%;
+    height: 100%;
+    color: black;
+    transition: all 1s ease-in-out;
+    transform: translateX(-100%);
+  }
+  nav {
+    position: relative;
+  }
+  nav a {
+    color: black;
+  }
+}

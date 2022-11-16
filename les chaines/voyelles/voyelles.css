@@ -1,0 +1,12 @@
+button {
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: #ffff;
+}
+
+#output {
+  background-color: #fff;
+  padding: 1rem;
+}
